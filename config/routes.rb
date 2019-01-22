@@ -6,4 +6,6 @@ Rails.application.routes.draw do
       resources :back_scratchers
     end
   end
+
+  resources :back_scratchers
 end

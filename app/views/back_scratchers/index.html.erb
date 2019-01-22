@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Cost</th>
+  </thead>
+  <tbody>
+    <tr>
+      <% @items.each do |item| %>
+        <td><%= item.id %></td>
+        <td><%= item.item_name %></td>
+        <td><%= item.item_description %></td>
+        <td>$<%= item.item_cost %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
