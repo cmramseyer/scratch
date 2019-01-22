@@ -1,4 +1,4 @@
-class Api::V1::BackScratchersController < ActionController::API
+class Api::V1::BackScratchersController < Api::V1::ApiController
 
   before_action :set_item, only: [:show, :update, :destroy]
 

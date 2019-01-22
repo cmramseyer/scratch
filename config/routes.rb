@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :back_scratchers
+
+  post 'authenticate', to: 'authentication#authenticate'
 end
