@@ -2,3 +2,8 @@ simple_back_scratcher:
   item_name: Simple Back Scratcher
   item_description: An ordinary one
   item_cost: 12.34
+
+another_back_scratcher:
+  item_name: Another Back Scratcher
+  item_description: Another ordinary one
+  item_cost: 23.45
