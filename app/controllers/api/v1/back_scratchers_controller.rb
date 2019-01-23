@@ -14,23 +14,23 @@ class Api::V1::BackScratchersController < Api::V1::ApiController
   def create
     @item = Item.new(item_params)
     if @item.save
-      render json: {message: 'Item was created'}, status: :ok
+      render json: { message: 'Item was created'}, status: :ok
     else
-      render json: @item.errors, status: :unprocessable_entity
+      render json: { message: 'Item was not created', errors: @item.errors }, status: :unprocessable_entity
     end
   end
 
   def update
     if @item.update(item_params)
-      render json: {message: 'Item was updated'}, status: :ok
+      render json: { message: 'Item was updated' }, status: :ok
     else
-      render json: @item.errors, status: :unprocessable_entity
+      render json: { message: 'Item was not updated', errors: @item.errors }, status: :unprocessable_entity
     end
   end
 
   def destroy
     @item.destroy
-    render json: {message: 'Item was destroyed'}, status: :ok
+    render json: { message: 'Item was destroyed' }, status: :ok
   end
 
   private
